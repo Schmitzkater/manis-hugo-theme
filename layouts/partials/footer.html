@@ -25,5 +25,8 @@
 		{{ if .Site.Params.HighlightJs }}
 		<script>hljs.initHighlightingOnLoad();</script>
 		{{ end }}
+		{{- range .Params.js }}
+        <script src="{{ . }}.js"></script>
+    {{- end }}
 	</body>
 </html>
